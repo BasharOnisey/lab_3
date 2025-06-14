@@ -5,10 +5,25 @@
     android:orientation="vertical">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:allowUndo="true"
+        android:text="@string/welcome_message"
+        android:visibility="visible" />
+
     <Button
         android:id="@+id/previousPageButton"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Go back to previous" />
+        android:layout_height="wrap_content"
+        android:allowUndo="true"
+        android:text="@string/Dont_call_me_that" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Thank_you" />
 
 </LinearLayout>

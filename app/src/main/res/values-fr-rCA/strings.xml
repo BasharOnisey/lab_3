@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Application de la semaine 3</string>
+    <string name="back_button_text">Retour</string>
+    <string name="thank_you_button_text">Merci</string>
+    <string name="next_button">suivant</string>
+    <string name="dont_call_me_that">ne mappelle pas comme ça</string>
+    <string name="enter_your_name">entrez votre nom</string>
+    <string name="Thank_you">merci</string>
+    <string name="welcome_message">Bienvenue %1$s</string>
+    <string name="Dont_call_me_that">ne mappelle pas comme ça</string>
+    <string name="reserve_not_found">réserve non trouvée</string>
+    <string name="activity_first">activity</string>
+
+</resources>

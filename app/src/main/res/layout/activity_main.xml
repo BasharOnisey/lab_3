@@ -6,14 +6,14 @@
 
     <EditText
         android:id="@+id/inputText"
-        android:hint="Type here"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_name" />
 
     <Button
         android:id="@+id/buttonToSecond"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Go to second activity" />
+        android:layout_height="wrap_content"
+        android:text="@string/next_button" />
 
 </LinearLayout>

@@ -1,46 +1,57 @@
 package com.example.week3;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class FirstActivity extends AppCompatActivity {
+
+    EditText nameInput;
+    Button nextButton;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // setContentView loads objects onto the screen.
-        // Before this function, the screen is empty.
         setContentView(R.layout.activity_main);
 
-        Intent nextPage = new Intent(this, SecondActivity.class);
-        Button secondButton = findViewById(R.id.buttonToSecond);
-        secondButton.setOnClickListener( click -> startActivity( nextPage ));
+        // Access SharedPreferences
+        prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String savedName = prefs.getString("ReserveName", null);
 
+        // If name already saved, go directly to SecondActivity
+        if (savedName != null) {
+            Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
+        // Link views
+        nameInput = findViewById(R.id.inputText);
+        nextButton = findViewById(R.id.buttonToSecond);
+
+        // Set click listener for the Next button
+        nextButton.setOnClickListener(v -> {
+            String enteredName = nameInput.getText().toString().trim();
+
+            if (!enteredName.isEmpty()) {
+                // Save name to SharedPreferences
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("ReserveName", enteredName);
+                editor.apply();
+
+                // Go to SecondActivity
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivity(intent);
+                finish(); // Optional: close FirstActivity
+            } else {
+                nameInput.setError("Please enter your name");
+            }
+        });
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
 }

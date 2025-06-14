@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">week3</string>
-    <string name="hello"> Hello world</string>
-    <string name="checkbox"> This is checkbox</string>
-    <string name="hint"> This hint disappears </string>
-    <string name="switchItUp">This is a switch</string>
-    <string name="radio"> Radio Button</string>
-    <string name="activity2">Go to second activity</string>
-    <string name="item2">Go to second activity</string>
-    <string name="sendEmail">Send an email</string>
-    <string name="viewURL">Go to a URL</string>
-    <string name="buttonToSecond">Button To Second</string>
-    <string name="previousPageButton">Previous Page Button</string>
-    <string name="toastMessage1">You sent name %s, age %d, and typed: %s</string>
+    <string name="app_name">lab 3 app</string>
+    <string name="back_button_text">Back</string>
+    <string name="thank_you_button_text">Thank You</string>
+    <string name="next_button">next</string>
+    <string name="dont_call_me_that">DONT CALL ME THAT</string>
+    <string name="enter_your_name">enter your name</string>
+    <string name="Thank_you">Thank You</string>
+    <string name="welcome_message">Welcome %1$s</string>
+    <string name="Dont_call_me_that">dont call me that</string>
+    <string name="reserve_not_found">dont_call_me_that</string>
+    <string name="activity_first">activity</string>
+
+
 </resources>
